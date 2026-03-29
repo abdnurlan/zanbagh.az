@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const HeroScene = dynamic(() => import("./HeroScene"), {
   ssr: false,
-  loading: () => <div className="w-full h-full bg-[var(--dark-1)]" />,
+  loading: () => <div className="w-full h-full bg-[var(--background)]" />,
 });
 
 const words = ["Hər", "An", "Bir", "Çiçəyi", "Haqq Edir"];
@@ -40,7 +40,7 @@ export default function HeroSection() {
       ref={containerRef}
       id="hero"
       className="relative w-full h-screen min-h-[700px] overflow-hidden flex items-center justify-center"
-      style={{ background: "var(--dark-1)" }}
+      style={{ background: "var(--background)" }}
     >
       <div className="noise-overlay absolute inset-0 z-[1]" />
 
@@ -52,21 +52,21 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,164,176,0.12) 0%, rgba(201,169,110,0.06) 40%, transparent 70%)",
+              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,64,96,0.10) 0%, rgba(242,143,160,0.06) 40%, transparent 70%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 50% 50% at 80% 20%, rgba(245,234,214,0.08) 0%, transparent 60%)",
+              "radial-gradient(ellipse 50% 50% at 80% 20%, rgba(242,143,160,0.12) 0%, transparent 60%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,122,138,0.06) 0%, transparent 60%)",
+              "radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,64,96,0.08) 0%, transparent 60%)",
           }}
         />
       </motion.div>
@@ -111,8 +111,8 @@ export default function HeroSection() {
                 style={{
                   background:
                     i === 4
-                      ? "linear-gradient(135deg, var(--rose-light) 0%, var(--gold) 100%)"
-                      : "linear-gradient(180deg, var(--ivory) 0%, rgba(245,237,232,0.7) 100%)",
+                      ? "linear-gradient(135deg, #c94060 0%, #8c3050 100%)"
+                      : "linear-gradient(180deg, #2a1a1f 0%, #6b2a3a 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -130,7 +130,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-[var(--champagne)] text-base md:text-lg font-light leading-relaxed max-w-lg mb-12 opacity-70"
+          className="text-[#6b3a4a] text-base md:text-lg font-light leading-relaxed max-w-lg mb-12"
         >
           Həyatın ən gözəl anları üçün əl ilə hazırlanmış buketlər.
           Kiçik hisslərdən böyük bayramlara qədər.
@@ -163,7 +163,7 @@ export default function HeroSection() {
 
           <motion.button
             onClick={handleScrollToCollections}
-            className="px-10 py-4 rounded-full text-sm font-semibold tracking-[0.2em] uppercase glass border-[var(--glass-border)] text-[var(--champagne-light)] hover:text-white hover:border-[var(--rose-light)] transition-all duration-300"
+            className="px-10 py-4 rounded-full text-sm font-semibold tracking-[0.2em] uppercase glass text-[#6b3a4a] hover:text-[#c94060] transition-all duration-300"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -177,11 +177,11 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 2 }}
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-[10px] tracking-[0.3em] uppercase text-white/30 font-medium">Aşağı</span>
+          <span className="text-[10px] tracking-[0.3em] uppercase text-[#b0526a]/50 font-medium">Aşağı</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-px h-10 bg-gradient-to-b from-[var(--rose-light)] to-transparent"
+            className="w-px h-10 bg-gradient-to-b from-[#c94060] to-transparent"
           />
         </motion.div>
       </motion.div>
@@ -189,7 +189,7 @@ export default function HeroSection() {
       <div
         className="absolute bottom-0 left-0 right-0 h-40 z-[5]"
         style={{
-          background: "linear-gradient(to top, var(--dark-1) 0%, transparent 100%)",
+          background: "linear-gradient(to top, var(--background) 0%, transparent 100%)",
         }}
       />
     </section>

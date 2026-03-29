@@ -218,7 +218,7 @@ function CollectionCard({
             </span>
           </div>
 
-          <h3 className="font-serif text-2xl font-bold text-[var(--ivory)] mb-1">
+          <h3 className="font-serif text-2xl font-bold text-[#2a1a1f] mb-1">
             {collection.title}
           </h3>
           <p
@@ -227,12 +227,12 @@ function CollectionCard({
           >
             {collection.subtitle}
           </p>
-          <p className="text-sm text-white/50 leading-relaxed mb-8">
+          <p className="text-sm text-[#6b3a4a]/70 leading-relaxed mb-8">
             {collection.description}
           </p>
 
           <div className="flex items-center justify-between">
-            <span className="font-serif text-xl font-semibold text-[var(--champagne-light)]">
+            <span className="font-serif text-xl font-semibold text-[#c94060]">
               {collection.price}
             </span>
             <motion.button
@@ -287,7 +287,7 @@ export default function CollectionsSection() {
       id="collections"
       ref={sectionRef}
       className="relative py-32 px-6"
-      style={{ background: "var(--dark-1)" }}
+      style={{ background: "var(--background)" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
@@ -311,7 +311,7 @@ export default function CollectionsSection() {
             <br />
             <span className="text-gradient-rose italic">Xüsusi Yaradılmış</span>
           </h2>
-          <p className="text-white/40 text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-[#6b3a4a]/60 text-base max-w-lg mx-auto leading-relaxed">
             Kiçik anlardan böyük mərasimlərə qədər, sənətkarlıqla hazırlanmış
             çiçək kolleksiyalarımızı kəşf edin.
           </p>

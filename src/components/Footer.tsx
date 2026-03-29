@@ -44,14 +44,14 @@ export default function Footer() {
   return (
     <footer
       className="relative pt-24 pb-10 px-6 overflow-hidden"
-      style={{ background: "var(--dark-2)" }}
+      style={{ background: "#f5e0e7" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
-          background: "linear-gradient(90deg, transparent, var(--rose-dark), transparent)",
+          background: "linear-gradient(90deg, transparent, #c94060, transparent)",
         }}
       />
 
@@ -59,13 +59,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
             <motion.div
-              className="font-serif text-3xl font-bold text-gradient-champagne mb-4 tracking-widest uppercase"
+              className="font-serif text-3xl font-bold text-[#6b3a4a] mb-4 tracking-widest uppercase"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
               Zanbagh
             </motion.div>
-            <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[#6b3a4a] text-sm leading-relaxed mb-6 max-w-xs">
               Bakının mərkəzində 2019-dan bəri unudulmaz
               çiçək təcrübələri yaradır.
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full glass flex items-center justify-center text-white/50 hover:text-[var(--rose-light)] transition-colors duration-300"
+                  className="w-10 h-10 rounded-full glass flex items-center justify-center text-[#6b3a4a] hover:text-[#c94060] transition-colors duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.name}
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--gold)] mb-5">
+              <h4 className="text-xs font-semibold tracking-[0.3em] uppercase text-[#6b3a4a] mb-5">
                 {category}
               </h4>
               <ul className="space-y-3">
@@ -98,13 +98,13 @@ export default function Footer() {
                   <li key={link}>
                     <motion.a
                       href="#"
-                      className="text-sm text-white/40 hover:text-[var(--rose-light)] transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-xs font-medium tracking-[0.2em] uppercase text-[#6b3a4a] hover:text-[#c94060] transition-colors duration-300 flex items-center gap-2 group"
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
                       onClick={(e) => e.preventDefault()}
                       data-cursor="hover"
                     >
-                      <span className="w-0 h-px bg-[var(--rose-light)] group-hover:w-3 transition-all duration-300" />
+                      <span className="w-0 h-px bg-[#c94060] group-hover:w-3 transition-all duration-300" />
                       {link}
                     </motion.a>
                   </li>
@@ -116,9 +116,9 @@ export default function Footer() {
 
         <div
           className="py-8 border-t flex flex-col md:flex-row items-center justify-between gap-4"
-          style={{ borderColor: "rgba(255,255,255,0.06)" }}
+          style={{ borderColor: "rgba(201,64,96,0.15)" }}
         >
-          <p className="text-xs text-white/25 tracking-wider">
+          <p className="text-xs text-[#6b3a4a]/40 tracking-wider">
             © {new Date().getFullYear()} Zanbagh. Bütün hüquqlar qorunur. · Bakı, Azərbaycan
           </p>
           <div className="flex items-center gap-6">
@@ -126,7 +126,7 @@ export default function Footer() {
               <motion.a
                 key={item}
                 href="#"
-                className="text-xs text-white/25 hover:text-white/50 transition-colors duration-300"
+                className="text-xs text-[#6b3a4a]/40 hover:text-[#c94060] transition-colors duration-300"
                 onClick={(e) => e.preventDefault()}
                 data-cursor="hover"
               >

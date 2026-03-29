@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0806;
-  --foreground: #f5ede8;
+  --background: #fdf8f5;
+  --foreground: #2a1a1f;
 
-  --rose: #e8a4b0;
-  --rose-light: #f2c4ce;
-  --rose-dark: #c97a8a;
-  --champagne: #e8d5b7;
-  --champagne-light: #f5ead6;
-  --ivory: #faf6f0;
-  --gold: #c9a96e;
-  --gold-light: #e0c48a;
-  --dark-1: #0a0806;
-  --dark-2: #130f0b;
-  --dark-3: #1e1710;
-  --dark-4: #2a2018;
-  --glass: rgba(255,255,255,0.04);
-  --glass-border: rgba(255,255,255,0.08);
+  --rose: #e8607a;
+  --rose-light: #f28fa0;
+  --rose-dark: #c94060;
+  --champagne: #8c5a6a;
+  --champagne-light: #6b3a4a;
+  --ivory: #2a1a1f;
+  --gold: #b0526a;
+  --gold-light: #d4788a;
+  --dark-1: #fdf8f5;
+  --dark-2: #faeef2;
+  --dark-3: #f5e0e7;
+  --dark-4: #edd0d8;
+  --glass: rgba(255,255,255,0.60);
+  --glass-border: rgba(200,100,120,0.18);
 }
 
 @theme inline {
@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  background: var(--dark-1);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
@@ -59,14 +59,14 @@ body {
 
 ::selection {
   background: var(--rose-dark);
-  color: var(--ivory);
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--dark-2);
+  background: #f5e0e7;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--rose-dark);
@@ -78,47 +78,47 @@ body {
 }
 
 .text-gradient-rose {
-  background: linear-gradient(135deg, var(--rose-light) 0%, var(--gold) 100%);
+  background: linear-gradient(135deg, #c94060 0%, #8c3050 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-champagne {
-  background: linear-gradient(135deg, var(--champagne-light) 0%, var(--rose) 100%);
+  background: linear-gradient(135deg, #2a1a1f 0%, #c94060 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .glass {
-  background: var(--glass);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(200,80,100,0.15);
 }
 
 .glass-strong {
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(200,80,100,0.18);
 }
 
 .luxury-shadow {
-  box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 2px 8px rgba(232,164,176,0.1);
+  box-shadow: 0 8px 40px rgba(180,60,80,0.12), 0 2px 8px rgba(200,80,100,0.08);
 }
 
 .luxury-shadow-lg {
-  box-shadow: 0 24px 80px rgba(0,0,0,0.8), 0 4px 16px rgba(232,164,176,0.15);
+  box-shadow: 0 24px 80px rgba(180,60,80,0.18), 0 4px 16px rgba(200,80,100,0.12);
 }
 
 .glow-rose {
-  box-shadow: 0 0 60px rgba(232,164,176,0.25), 0 0 120px rgba(232,164,176,0.1);
+  box-shadow: 0 0 60px rgba(200,60,80,0.18), 0 0 120px rgba(200,60,80,0.08);
 }
 
 .glow-gold {
-  box-shadow: 0 0 60px rgba(201,169,110,0.2), 0 0 120px rgba(201,169,110,0.08);
+  box-shadow: 0 0 60px rgba(180,60,80,0.12), 0 0 120px rgba(180,60,80,0.06);
 }
 
 .animate-float {
@@ -206,7 +206,7 @@ body {
 
 .noise-overlay {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  opacity: 0.015;
   pointer-events: none;
 }
 

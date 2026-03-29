@@ -59,7 +59,7 @@ function MapPlaceholder() {
   return (
     <div
       className="relative w-full h-full rounded-2xl overflow-hidden"
-      style={{ background: "var(--dark-3)", minHeight: 320 }}
+      style={{ background: "#f0d8e0", minHeight: 320 }}
     >
       <div
         className="absolute inset-0"
@@ -126,12 +126,12 @@ function MapPlaceholder() {
                 className="absolute inset-0 rounded-full"
                 animate={{ scale: [1, 2, 1], opacity: [0.5, 0, 0.5] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
-                style={{ border: "2px solid var(--rose-light)" }}
+                style={{ border: "2px solid #6b3a4a" }}
               />
             </div>
           </motion.div>
           <div className="glass px-4 py-2 rounded-full">
-              <span className="text-xs text-white/70 font-medium">Vaqif pr. 105C, Bakı</span>
+              <span className="text-xs text-[#6b3a4a]/45 font-medium tracking-wider">Vaqif pr. 105C, Bakı</span>
           </div>
         </motion.div>
       </div>
@@ -141,7 +141,7 @@ function MapPlaceholder() {
         target="_blank"
         rel="noopener noreferrer"
         className="absolute bottom-4 right-4 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase glass flex items-center gap-2"
-        style={{ color: "var(--rose-light)" }}
+        style={{ color: "#6b3a4a" }}
         whileHover={{ scale: 1.05 }}
         data-cursor="hover"
       >
@@ -165,14 +165,14 @@ export default function LocationSection() {
       id="location"
       ref={sectionRef}
       className="relative py-32 px-6 overflow-hidden"
-      style={{ background: "var(--dark-1)" }}
+      style={{ background: "#f7f7f7" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-24"
         style={{
-          background: "linear-gradient(to top, transparent, var(--rose-dark))",
+          background: "linear-gradient(to top, transparent, #6b3a4a)",
         }}
       />
 
@@ -183,7 +183,7 @@ export default function LocationSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-20"
         >
-          <p className="text-xs font-medium tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
+          <p className="text-xs font-medium tracking-[0.4em] uppercase text-[#6b3a4a] mb-4">
             Bizi Tapın
           </p>
           <h2 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-bold leading-tight">
@@ -223,21 +223,21 @@ export default function LocationSection() {
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="flex items-start gap-4 p-5 rounded-xl glass hover:border-[var(--rose-light)] transition-all duration-300 group-hover:-translate-y-1"
+                      className="flex items-start gap-4 p-5 rounded-xl glass hover:border-[#6b3a4a] transition-all duration-300 group-hover:-translate-y-1"
                       data-cursor="hover"
                     >
-                      <span className="text-[var(--rose-light)] mt-0.5 flex-shrink-0">{item.icon}</span>
+                      <span className="text-[#6b3a4a] mt-0.5 flex-shrink-0">{item.icon}</span>
                       <div>
-                        <div className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-1">{item.label}</div>
-                        <div className="text-sm text-[var(--champagne-light)] font-medium">{item.value}</div>
+                        <div className="text-[10px] uppercase tracking-[0.2em] text-[#6b3a4a]/30 mb-1">{item.label}</div>
+                        <div className="text-sm text-[#6b3a4a]/70 font-medium">{item.value}</div>
                       </div>
                     </a>
                   ) : (
                     <div className="flex items-start gap-4 p-5 rounded-xl glass">
-                      <span className="text-[var(--rose-light)] mt-0.5 flex-shrink-0">{item.icon}</span>
+                      <span className="text-[#6b3a4a] mt-0.5 flex-shrink-0">{item.icon}</span>
                       <div>
-                        <div className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-1">{item.label}</div>
-                        <div className="text-sm text-[var(--champagne-light)] font-medium">{item.value}</div>
+                        <div className="text-[10px] uppercase tracking-[0.2em] text-[#6b3a4a]/30 mb-1">{item.label}</div>
+                        <div className="text-sm text-[#6b3a4a]/70 font-medium">{item.value}</div>
                       </div>
                     </div>
                   )}
@@ -246,7 +246,7 @@ export default function LocationSection() {
             </div>
 
             <div>
-              <h3 className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--gold)] mb-4">
+              <h3 className="text-xs font-medium tracking-[0.3em] uppercase text-[#6b3a4a] mb-4">
                 Çatdırılma Zonaları
               </h3>
               <div className="space-y-3">
@@ -264,12 +264,12 @@ export default function LocationSection() {
                         style={{ background: zone.color }}
                       />
                       <div>
-                        <span className="text-xs font-semibold text-white/70 tracking-wider">{zone.zone}</span>
-                        <span className="text-xs text-white/30 ml-2">{zone.area}</span>
+                        <span className="text-xs font-semibold text-[#6b3a4a]/70 tracking-wider">{zone.zone}</span>
+                        <span className="text-xs text-[#6b3a4a]/40">{zone.area}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4 text-right flex-shrink-0">
-                      <span className="text-xs text-white/40">{zone.time}</span>
+                      <span className="text-xs text-[#6b3a4a]/40">{zone.time}</span>
                       <span
                         className="text-xs font-bold"
                         style={{ color: zone.color }}

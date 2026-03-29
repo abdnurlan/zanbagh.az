@@ -23,7 +23,7 @@ export default function StickyActions() {
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-11 h-11 rounded-full glass flex items-center justify-center text-white/60 hover:text-[var(--rose-light)] transition-colors duration-300"
+            className="w-11 h-11 rounded-full glass flex items-center justify-center text-[#6b3a4a]/60 hover:text-[#c94060] transition-colors duration-300"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.93 }}
             aria-label="Yuxarı qayıt"

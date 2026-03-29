@@ -95,11 +95,13 @@ function PetalAssembly({ progress }: { progress: number }) {
             width: 60 + progress * 20,
             height: 60 + progress * 20,
             background: `radial-gradient(circle, var(--gold) 0%, var(--rose-dark) 100%)`,
-            boxShadow: `0 0 ${30 * progress}px rgba(232,164,176,0.5)`,
+            boxShadow: `0 0 ${30 * progress}px rgba(201,64,96,0.35)`,
           }}
         >
-          <span className="text-2xl" style={{ opacity: progress }}>
-            🌹
+          <span
+            style={{ opacity: progress }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c94060" strokeWidth="1.5"><path d="M12 2C8 2 5 5 5 8c0 4 7 14 7 14s7-10 7-14c0-3-3-6-7-6z"/><circle cx="12" cy="8" r="2" fill="#c94060" opacity="0.4"/></svg>
           </span>
         </motion.div>
       </div>
@@ -107,7 +109,7 @@ function PetalAssembly({ progress }: { progress: number }) {
       <motion.div
         className="absolute inset-0 rounded-full"
         style={{
-          border: "1px solid rgba(232,164,176,0.15)",
+          border: "1px solid rgba(201,64,96,0.2)",
           scale: 1 + progress * 0.1,
           opacity: progress * 0.5,
         }}
@@ -115,7 +117,7 @@ function PetalAssembly({ progress }: { progress: number }) {
       <motion.div
         className="absolute inset-[-20px] rounded-full"
         style={{
-          border: "1px solid rgba(201,169,110,0.08)",
+          border: "1px solid rgba(201,64,96,0.1)",
           scale: 1 + progress * 0.05,
           opacity: progress * 0.3,
         }}
@@ -169,7 +171,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
           </span>
           <div className="h-px w-8" style={{ background: `${step.color}40` }} />
         </div>
-        <h3 className="font-serif text-3xl md:text-4xl font-bold text-[var(--ivory)] mb-2">
+        <h3 className="font-serif text-3xl md:text-4xl font-bold text-[#2a1a1f] mb-2">
           {step.title}
         </h3>
         <p
@@ -178,7 +180,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
         >
           {step.subtitle}
         </p>
-        <p className="text-white/50 text-base leading-relaxed max-w-md">
+        <p className="text-[#6b3a4a]/65 text-base leading-relaxed max-w-md">
           {step.description}
         </p>
       </div>
@@ -209,7 +211,7 @@ export default function ExperienceSection() {
       id="experience"
       ref={sectionRef}
       className="relative py-32 px-6 overflow-hidden"
-      style={{ background: "var(--dark-2)" }}
+      style={{ background: "#faeef2" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
@@ -218,13 +220,13 @@ export default function ExperienceSection() {
         style={{ y: bgY }}
       >
         <div
-          className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full opacity-[0.04]"
+          className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full opacity-[0.08]"
           style={{
             background: "radial-gradient(circle, var(--rose) 0%, transparent 70%)",
           }}
         />
         <div
-          className="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full opacity-[0.04]"
+          className="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full opacity-[0.06]"
           style={{
             background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)",
           }}
@@ -284,14 +286,14 @@ export default function ExperienceSection() {
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="text-center p-6 rounded-2xl glass"
+              className="text-center p-6 rounded-2xl glass shadow-sm"
               whileHover={{ y: -4 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="font-serif text-3xl md:text-4xl font-bold text-gradient-rose mb-2">
+              <div className="font-serif text-3xl md:text-4xl font-bold text-[#c94060] mb-2">
                 {stat.value}
               </div>
-              <div className="text-[11px] tracking-[0.2em] uppercase text-white/40">
+              <div className="text-xs uppercase tracking-widest text-[#6b3a4a]/50">
                 {stat.label}
               </div>
             </motion.div>

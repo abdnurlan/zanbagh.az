@@ -38,14 +38,14 @@ export default function Navigation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${
-          scrolled ? "glass-strong py-3" : "py-6"
+          scrolled ? "glass-strong py-3" : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <motion.a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="font-serif text-xl font-bold tracking-widest text-gradient-champagne uppercase"
+            className="font-serif text-xl font-bold tracking-widest uppercase text-[#2a1a1f]"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
@@ -57,7 +57,7 @@ export default function Navigation() {
               <motion.button
                 key={link.label}
                 onClick={() => handleNavClick(link.href)}
-                className="text-xs font-medium tracking-[0.2em] uppercase text-white/60 hover:text-[var(--rose-light)] transition-colors duration-300 relative group"
+                className="text-xs font-medium tracking-[0.2em] uppercase text-[#6b3a4a]/70 hover:text-[#c94060] transition-colors duration-300 relative group"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.08, duration: 0.5 }}
@@ -98,15 +98,15 @@ export default function Navigation() {
           >
             <motion.span
               animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 8 : 0 }}
-              className="block w-6 h-0.5 bg-[var(--rose-light)]"
+              className="block w-6 h-0.5 bg-[#c94060]"
             />
             <motion.span
               animate={{ opacity: menuOpen ? 0 : 1, x: menuOpen ? -10 : 0 }}
-              className="block w-6 h-0.5 bg-[var(--rose-light)]"
+              className="block w-6 h-0.5 bg-[#c94060]"
             />
             <motion.span
               animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -8 : 0 }}
-              className="block w-6 h-0.5 bg-[var(--rose-light)]"
+              className="block w-6 h-0.5 bg-[#c94060]"
             />
           </button>
         </div>
@@ -120,7 +120,7 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="fixed inset-0 z-[99] flex flex-col items-center justify-center"
-            style={{ background: "rgba(10,8,6,0.97)" }}
+            style={{ background: "rgba(253,248,245,0.97)" }}
           >
             <div className="noise-overlay absolute inset-0" />
             <nav className="flex flex-col items-center gap-8 relative z-10">
@@ -128,7 +128,7 @@ export default function Navigation() {
                 <motion.button
                   key={link.label}
                   onClick={() => handleNavClick(link.href)}
-                  className="font-serif text-4xl font-light text-gradient-champagne"
+                  className="font-serif text-4xl font-light text-[#2a1a1f] hover:text-[#c94060] transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}

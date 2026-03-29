@@ -57,7 +57,7 @@ function MarqueeTrack() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="overflow-hidden py-6 border-y" style={{ borderColor: "rgba(232,164,176,0.1)" }}>
+    <div className="overflow-hidden py-6 border-y" style={{ borderColor: "rgba(201,64,96,0.15)" }}>
       <motion.div
         className="flex gap-8 whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
@@ -68,8 +68,8 @@ function MarqueeTrack() {
             key={i}
             className={`text-sm font-medium tracking-[0.2em] uppercase flex-shrink-0 ${
               item === "·"
-                ? "text-[var(--gold)]"
-                : "text-white/30"
+                ? "text-[#c94060]"
+                : "text-[#6b3a4a]/40"
             }`}
           >
             {item}
@@ -97,7 +97,7 @@ export default function AboutSection() {
       id="about"
       ref={sectionRef}
       className="relative py-32 overflow-hidden"
-      style={{ background: "var(--dark-2)" }}
+      style={{ background: "var(--background)" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
@@ -144,7 +144,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-white/50 text-lg leading-relaxed mb-6"
+              className="text-[#6b3a4a]/75 text-lg leading-relaxed mb-6"
             >
               2019-cu ildə Bakının mərkəzində qurulan Zanbagh sadə bir inancdan doğdu:
               həyatdakı hər an yüksəldilməyi haqq edir. Biz sadəcə bir çiçəkçi yox —
@@ -155,7 +155,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.45 }}
-              className="text-white/40 text-base leading-relaxed mb-12"
+              className="text-[#6b3a4a]/60 text-base leading-relaxed mb-12"
             >
               Kiçik ad günü sürprizlərindən böyük toy qurğularına qədər usta çiçəkçilərimiz
               hər bəzəyi tək nüsxəli sənət əsəri kimi yaradır. Yalnız ən gözəl çiçəklər —
@@ -195,7 +195,7 @@ export default function AboutSection() {
             >
               <div
                 className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-md mx-auto"
-                style={{ background: "var(--dark-3)" }}
+                style={{ background: "var(--background)" }}
               >
                 <div
                   className="absolute inset-0"
@@ -223,7 +223,7 @@ export default function AboutSection() {
                     <div className="font-serif text-5xl font-bold text-gradient-rose mb-2">
                       Zanbagh
                     </div>
-                    <div className="text-xs tracking-[0.4em] uppercase text-white/30">
+                    <div className="text-xs tracking-[0.4em] uppercase text-[#6b3a4a]/40">
                       Lüks Çiçəklər · Bakı
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export default function AboutSection() {
                         <div className="font-serif text-2xl font-bold text-gradient-champagne">
                           {s.v}
                         </div>
-                        <div className="text-[10px] uppercase tracking-widest text-white/30 mt-1">
+                        <div className="text-[10px] uppercase tracking-widest text-[#6b3a4a]/40 mt-1">
                           {s.l}
                         </div>
                       </div>
@@ -278,7 +278,7 @@ export default function AboutSection() {
                 animate={{ y: [0, -4, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
-                <div className="text-xs text-white/60">★ 4.9 · 500+ rəy</div>
+                <div className="text-xs text-[#6b3a4a]/70">★ 4.9 · 500+ rəy</div>
               </motion.div>
             </motion.div>
           </div>
@@ -301,10 +301,10 @@ export default function AboutSection() {
               >
                 {value.icon}
               </div>
-              <h3 className="font-serif text-xl font-bold text-[var(--ivory)] mb-3">
+              <h3 className="font-serif text-xl font-bold text-[#2a1a1f] mb-3">
                 {value.title}
               </h3>
-              <p className="text-white/40 text-sm leading-relaxed">{value.description}</p>
+              <p className="text-[#6b3a4a]/60 text-sm flex items-center gap-3">{value.description}</p>
             </motion.div>
           ))}
         </div>

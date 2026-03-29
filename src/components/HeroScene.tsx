@@ -174,38 +174,38 @@ function MouseLight() {
     lightRef.current.position.y += (mouse.y * viewport.height * 0.5 - lightRef.current.position.y) * 0.08;
   });
 
-  return <pointLight ref={lightRef} position={[0, 0, 4]} intensity={2.5} color="#f2c4ce" distance={12} />;
+  return <pointLight ref={lightRef} position={[0, 0, 4]} intensity={1.2} color="#ffd0da" distance={14} />;
 }
 
 function Scene() {
   const flowers = useMemo(
     () => [
-      { pos: [-3.5, 1.5, -2] as [number,number,number], scale: 0.7, speed: 0.6, type: "flower", petalColor: "#f2c4ce", centerColor: "#c9a96e" },
-      { pos: [3.2, -1, -3] as [number,number,number], scale: 0.85, speed: 0.5, type: "flower", petalColor: "#e8d5b7", centerColor: "#e8a4b0" },
-      { pos: [-1.5, -2.5, -1.5] as [number,number,number], scale: 0.5, speed: 0.7, type: "flower", petalColor: "#c97a8a", centerColor: "#c9a96e" },
-      { pos: [0.5, 3, -6] as [number,number,number], scale: 1.1, speed: 0.35, type: "rose", petalColor: "#e8a4b0", centerColor: "#c97a8a" },
-      { pos: [-2.8, 2.8, -4] as [number,number,number], scale: 0.85, speed: 0.5, type: "rose", petalColor: "#f2c4ce", centerColor: "#e8d5b7" },
-      { pos: [3.5, -2.5, -5] as [number,number,number], scale: 0.9, speed: 0.45, type: "rose", petalColor: "#c97a8a", centerColor: "#c9a96e" },
+      { pos: [-3.5, 1.5, -2] as [number,number,number], scale: 0.7, speed: 0.6, type: "flower", petalColor: "#e8607a", centerColor: "#c94060" },
+      { pos: [3.2, -1, -3] as [number,number,number], scale: 0.85, speed: 0.5, type: "flower", petalColor: "#f28fa0", centerColor: "#c94060" },
+      { pos: [-1.5, -2.5, -1.5] as [number,number,number], scale: 0.5, speed: 0.7, type: "flower", petalColor: "#c94060", centerColor: "#8c3050" },
+      { pos: [0.5, 3, -6] as [number,number,number], scale: 1.1, speed: 0.35, type: "rose", petalColor: "#e8607a", centerColor: "#c94060" },
+      { pos: [-2.8, 2.8, -4] as [number,number,number], scale: 0.85, speed: 0.5, type: "rose", petalColor: "#f28fa0", centerColor: "#e8607a" },
+      { pos: [3.5, -2.5, -5] as [number,number,number], scale: 0.9, speed: 0.45, type: "rose", petalColor: "#c94060", centerColor: "#8c3050" },
     ],
     []
   );
 
   return (
     <>
-      <ambientLight intensity={0.35} color="#f5ede8" />
-      <directionalLight position={[5, 8, 5]} intensity={1.0} color="#f2c4ce" />
+      <ambientLight intensity={1.8} color="#fff0f3" />
+      <directionalLight position={[5, 8, 5]} intensity={0.6} color="#ffd0da" />
       <MouseLight />
 
       <Sparkles
-        count={60}
+        count={50}
         scale={[14, 9, 7]}
-        size={0.7}
+        size={0.6}
         speed={0.2}
-        color="#e8a4b0"
-        opacity={0.5}
+        color="#e8607a"
+        opacity={0.35}
       />
 
-      <fog attach="fog" args={["#0a0806", 7, 18]} />
+      <fog attach="fog" args={["#fdf8f5", 8, 20]} />
 
       {flowers.map((f, i) =>
         f.type === "rose" ? (

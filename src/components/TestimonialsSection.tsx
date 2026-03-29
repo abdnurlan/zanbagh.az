@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
       id="testimonials"
       ref={sectionRef}
       className="relative py-32 px-6 overflow-hidden"
-      style={{ background: "var(--dark-2)" }}
+      style={{ background: "#faeef2" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
@@ -119,7 +119,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-16"
         >
-          <p className="text-xs font-medium tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
+          <p className="text-xs text-[#6b3a4a]/50 tracking-[0.4em] uppercase mb-4">
             Rəylər
           </p>
           <h2 className="font-serif text-[clamp(2rem,5vw,4rem)] font-bold leading-tight">
@@ -149,12 +149,12 @@ export default function TestimonialsSection() {
 
               <StarRating count={testimonials[activeIndex].rating} />
 
-              <blockquote className="font-serif text-xl md:text-2xl font-light text-[var(--ivory)] leading-relaxed mt-6 mb-8 italic">
+              <blockquote className="font-serif text-xl md:text-2xl font-light text-[#2a1a1f] leading-relaxed mt-6 mb-8 italic">
                 &ldquo;{testimonials[activeIndex].text}&rdquo;
               </blockquote>
 
               <div>
-                <div className="font-semibold text-[var(--champagne-light)] tracking-wide">
+                <div className="font-semibold text-[#2a1a1f] tracking-wide">
                   {testimonials[activeIndex].name}
                 </div>
                 <div

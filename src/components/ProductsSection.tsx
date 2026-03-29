@@ -141,13 +141,13 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
     >
       <motion.div
         className="group relative rounded-2xl overflow-hidden cursor-pointer"
-        style={{ background: "var(--dark-3)" }}
+        style={{ background: "#fff" }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         animate={{
           boxShadow: isHovered
-            ? `0 32px 80px rgba(0,0,0,0.7), 0 0 40px ${product.accentColor}20`
-            : "0 8px 40px rgba(0,0,0,0.4)",
+            ? `0 20px 60px rgba(201,64,96,0.18), 0 0 30px ${product.accentColor}25`
+            : "0 4px 24px rgba(201,64,96,0.10)",
           y: isHovered ? -8 : 0,
         }}
         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -156,7 +156,7 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
         <div
           className="relative h-72 overflow-hidden flex items-center justify-center"
           style={{
-            background: `radial-gradient(ellipse at center, ${product.accentColor}15 0%, var(--dark-2) 100%)`,
+            background: `radial-gradient(ellipse at center, ${product.accentColor}50 0%, #f5cdd8 100%)`,
           }}
         >
           <motion.div
@@ -181,7 +181,7 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
 
           <div className="absolute top-4 left-4">
             <span
-              className="text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full"
+              className="text-[#6b3a4a]/50 text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1 rounded-full"
               style={{
                 background: `${product.badgeColor}20`,
                 color: product.badgeColor,
@@ -198,16 +198,16 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
             transition={{ duration: 0.3 }}
           >
             <div className="w-8 h-8 rounded-full glass flex items-center justify-center">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--rose-light)" strokeWidth="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c94060" strokeWidth="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
             </div>
           </motion.div>
 
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-20"
+            className="absolute bottom-0 left-0 right-0 h-16"
             style={{
-              background: "linear-gradient(to top, var(--dark-3), transparent)",
+              background: "linear-gradient(to top, #f5cdd8, transparent)",
             }}
           />
         </div>
@@ -215,7 +215,7 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
         <div className="p-6">
           <div className="flex items-start justify-between mb-2">
             <div>
-              <h3 className="font-serif text-xl font-bold text-[var(--ivory)] group-hover:text-[var(--rose-light)] transition-colors duration-300">
+              <h3 className="font-serif text-xl font-bold text-[#2a1a1f] mb-1 group-hover:text-[#c94060] transition-colors duration-300">
                 {product.name}
               </h3>
               <p
@@ -226,18 +226,18 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
               </p>
             </div>
             <div className="text-right">
-              <div className="font-serif text-xl font-bold text-[var(--champagne-light)]">
+              <div className="font-serif text-xl font-bold text-[#c94060]">
                 {product.price}
               </div>
               {product.originalPrice && (
-                <div className="text-xs text-white/30 line-through">
+                <div className="text-xs text-[#6b3a4a]/40 line-through">
                   {product.originalPrice}
                 </div>
               )}
             </div>
           </div>
 
-          <p className="text-sm text-white/40 mb-4 leading-relaxed">{product.description}</p>
+          <p className="text-sm text-[#6b3a4a]/65 mb-4 leading-relaxed">{product.description}</p>
 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5">
@@ -245,7 +245,7 @@ function ProductCard({ product, index }: { product: (typeof products)[0]; index:
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: product.accentColor }}
               />
-              <span className="text-[10px] text-white/30 tracking-wider">{product.stems} gövdə</span>
+              <span className="text-[10px] text-[#6b3a4a]/40 tracking-wider">{product.stems} gövdə</span>
             </div>
 
             <motion.button
@@ -308,7 +308,7 @@ export default function ProductsSection() {
       id="products"
       ref={sectionRef}
       className="relative py-32 overflow-hidden"
-      style={{ background: "var(--dark-1)" }}
+      style={{ background: "var(--background)" }}
     >
       <div className="noise-overlay absolute inset-0 pointer-events-none" />
 
@@ -318,7 +318,7 @@ export default function ProductsSection() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-            <p className="text-xs font-medium tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
+            <p className="text-xs font-medium tracking-[0.15em] uppercase mb-3 text-[#6b3a4a]">
               Seçilmişlər
             </p>
             <h2 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-bold leading-tight">
@@ -331,7 +331,7 @@ export default function ProductsSection() {
           <div className="flex items-center gap-3">
             <motion.button
               onClick={scrollLeft}
-              className="w-12 h-12 rounded-full glass flex items-center justify-center text-white/60 hover:text-[var(--rose-light)] transition-colors duration-300"
+              className="w-12 h-12 rounded-full glass flex items-center justify-center text-[#6b3a4a]/60 hover:text-[#c94060] transition-colors duration-300"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.93 }}
               data-cursor="hover"
@@ -342,7 +342,7 @@ export default function ProductsSection() {
             </motion.button>
             <motion.button
               onClick={scrollRight}
-              className="w-12 h-12 rounded-full glass flex items-center justify-center text-white/60 hover:text-[var(--rose-light)] transition-colors duration-300"
+              className="w-12 h-12 rounded-full glass flex items-center justify-center text-[#6b3a4a]/60 hover:text-[#c94060] transition-colors duration-300"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.93 }}
               data-cursor="hover"
@@ -376,13 +376,13 @@ export default function ProductsSection() {
           >
             <div
               className="w-20 h-20 rounded-full flex items-center justify-center glass"
-              style={{ border: "1px solid rgba(232,164,176,0.3)" }}
+              style={{ border: "1px solid rgba(201,64,96,0.25)" }}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--rose-light)" strokeWidth="1.5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c94060" strokeWidth="1.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </div>
-            <span className="text-xs font-medium tracking-[0.2em] uppercase text-[var(--rose-light)]">
+            <span className="text-xs font-medium tracking-[0.2em] uppercase text-[#c94060]">
               Hamısına Bax
             </span>
           </motion.button>
@@ -390,10 +390,10 @@ export default function ProductsSection() {
       </div>
 
       <div className="absolute top-1/2 left-0 w-24 h-full -translate-y-1/2 pointer-events-none"
-        style={{ background: "linear-gradient(to right, var(--dark-1), transparent)" }}
+        style={{ background: "linear-gradient(to right, var(--background), transparent)" }}
       />
       <div className="absolute top-1/2 right-0 w-24 h-full -translate-y-1/2 pointer-events-none"
-        style={{ background: "linear-gradient(to left, var(--dark-1), transparent)" }}
+        style={{ background: "linear-gradient(to left, var(--background), transparent)" }}
       />
     </section>
   );

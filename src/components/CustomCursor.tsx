@@ -89,7 +89,7 @@ export default function CustomCursor() {
           animate={{
             width: isHovering ? 8 : isClicking ? 4 : 6,
             height: isHovering ? 8 : isClicking ? 4 : 6,
-            backgroundColor: isHovering ? "#e8a4b0" : "#f5ede8",
+            backgroundColor: isHovering ? "#c94060" : "#2a1a1f",
           }}
           transition={{ duration: 0.15, ease: "easeOut" }}
           className="rounded-full"
@@ -111,8 +111,8 @@ export default function CustomCursor() {
             width: isHovering ? 56 : isClicking ? 24 : 36,
             height: isHovering ? 56 : isClicking ? 24 : 36,
             borderColor: isHovering
-              ? "rgba(232,164,176,0.8)"
-              : "rgba(245,237,232,0.3)",
+              ? "rgba(201,64,96,0.7)"
+              : "rgba(42,26,31,0.25)",
             rotate: isHovering ? 45 : 0,
           }}
           transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
